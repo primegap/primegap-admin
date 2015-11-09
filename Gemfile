@@ -27,4 +27,5 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.3'
+  gem 'shoulda-matchers', '~> 3.0'
 end
