@@ -9,6 +9,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 
+gem 'activeadmin', '~> 1.0.0.pre2'
+
 # Primegap Gems
 gem 'primegap-core', github: 'primegap/primegap-core', branch: 'master'
 
