@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 
 gem 'activeadmin', '~> 1.0.0.pre2'
+gem 'devise' # ActiveAdmin dependency
 
 # Primegap Gems
 gem 'primegap-core', github: 'primegap/primegap-core', branch: 'master'
