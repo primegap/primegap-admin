@@ -20,4 +20,24 @@ ActiveAdmin.register User do
     end
     f.actions
   end
+
+  show do
+    attributes_table do
+      row :id
+      row :email
+      row :created_at
+      row :updated_at
+    end
+    panel 'Authentication Tokens' do
+      table_for user.authentication_tokens do
+        column :body
+        column :last_used_at
+        column :ip_address
+        column :user_agent
+        column :created_at
+        column :updated_at
+      end
+    end
+    active_admin_comments
+  end
 end
