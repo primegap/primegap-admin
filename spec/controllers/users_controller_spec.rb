@@ -4,7 +4,7 @@ RSpec.describe 'Admin::User', type: :feature do
   let(:backend_path) { '/admin' }
 
   before do
-    @admin_user  = FactoryGirl.create(:admin_user)
+    @admin_user = FactoryGirl.create(:admin_user)
     @user1 = FactoryGirl.create(:user)
     @user2 = FactoryGirl.create(:user)
 
