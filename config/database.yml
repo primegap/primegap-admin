@@ -1,17 +1,15 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
 default: &default
   adapter: sqlite3
   pool: 5
   timeout: 5000
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= Integer(ENV['DB_POOL'] || ENV['MAX_THREADS'] || 5) %>
+  username: <%= ENV['DATABASE_USER'] || 'primegap-user' %>
+  password: <%= ENV['DATABASE_PSWD'] || '2a90e83f2437dc72dc402a0f9f46b469' %>
+  database: <%= ENV['DATABASE_NAME'] || 'primegap-development' %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
