@@ -22,12 +22,12 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end
 
 group :test do
+  gem 'sqlite3'
   gem 'codeclimate-test-reporter', require: nil
   gem 'capybara'
 end
