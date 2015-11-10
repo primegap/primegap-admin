@@ -18,6 +18,7 @@ group :production do
   gem 'puma'
   gem 'pg'
   gem 'rails_12factor' # heroku support
+  gem 'newrelic_rpm'
 end
 
 group :development do
