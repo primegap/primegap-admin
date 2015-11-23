@@ -1,10 +1,11 @@
 ActiveAdmin.register User do
-  permit_params :email, :password, :password_confirmation
+  permit_params :email, :company, :password, :password_confirmation
 
   index do
     selectable_column
     id_column
     column :email
+    column :company
     column :created_at
     actions
   end
@@ -18,6 +19,9 @@ ActiveAdmin.register User do
       f.input :password
       f.input :password_confirmation
     end
+    f.inputs 'Company' do
+      f.input :company
+    end
     f.actions
   end
 
@@ -25,6 +29,7 @@ ActiveAdmin.register User do
     attributes_table do
       row :id
       row :email
+      row :company
       row :created_at
       row :updated_at
     end

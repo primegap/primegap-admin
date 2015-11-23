@@ -1,4 +1,5 @@
 ActiveAdmin.register Customer do
+  belongs_to :company, optional: true
   permit_params :email, :full_name, :first_name, :last_name, :phone
 
   index do
@@ -15,7 +16,7 @@ ActiveAdmin.register Customer do
   filter :full_name
 
   form do |f|
-    f.inputs 'Admin Details' do
+    f.inputs 'Customer Details' do
       f.input :full_name
       f.input :first_name
       f.input :last_name
