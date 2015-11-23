@@ -7,3 +7,4 @@ Metrics/LineLength:
 AllCops:
   Exclude:
     - db/**/*
+    - bin/rspec
