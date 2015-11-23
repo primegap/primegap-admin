@@ -4,7 +4,7 @@ RSpec.describe 'Admin::Customer', type: :feature do
   let(:backend_path) { '/admin' }
 
   before do
-    @admin_user  = FactoryGirl.create(:admin_user)
+    @admin_user = FactoryGirl.create(:admin_user)
     @customer1 = FactoryGirl.create(:customer)
     @customer2 = FactoryGirl.create(:customer)
 
@@ -26,7 +26,7 @@ RSpec.describe 'Admin::Customer', type: :feature do
     expect(page).to have_content(@customer1.email)
   end
 
-  scenario "GET 'new' and create new admin user" do
+  scenario "GET 'new' and create new customer" do
     visit "#{backend_path}/customers/new"
 
     within '#new_customer' do
@@ -41,7 +41,7 @@ RSpec.describe 'Admin::Customer', type: :feature do
     expect(page).to have_content('newcustomer@email.com')
   end
 
-  scenario "GET 'edit' and update admin user" do
+  scenario "GET 'edit' and update customer" do
     visit "#{backend_path}/customers/#{@customer1.id}/edit"
 
     within '#edit_customer' do
@@ -54,7 +54,7 @@ RSpec.describe 'Admin::Customer', type: :feature do
     expect(page).to have_content('updatedcustomer@email.com')
   end
 
-  scenario "DELETE 'destroy'" do
+  scenario "DELETE 'destroy' customer" do
     visit "#{backend_path}/customers/#{@customer1.id}"
 
     click_link 'Delete Customer'

@@ -4,7 +4,7 @@ RSpec.describe 'Admin::AdminUser', type: :feature do
   let(:backend_path) { '/admin' }
 
   before do
-    @admin_user  = FactoryGirl.create(:admin_user)
+    @admin_user = FactoryGirl.create(:admin_user)
     @admin_user1 = FactoryGirl.create(:admin_user)
     @admin_user2 = FactoryGirl.create(:admin_user)
 
@@ -56,7 +56,7 @@ RSpec.describe 'Admin::AdminUser', type: :feature do
     expect(page).to have_content('updatedadmin@email.com')
   end
 
-  scenario "DELETE 'destroy'" do
+  scenario "DELETE 'destroy' admin user" do
     visit "#{backend_path}/admin_users/#{@admin_user1.id}"
 
     click_link 'Delete Admin User'

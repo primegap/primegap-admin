@@ -56,7 +56,7 @@ RSpec.describe 'Admin::User', type: :feature do
     expect(page).to have_content('updateduser@email.com')
   end
 
-  scenario "DELETE 'destroy'" do
+  scenario "DELETE 'destroy' user" do
     visit "#{backend_path}/users/#{@user1.id}"
 
     click_link 'Delete User'
