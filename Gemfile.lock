@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/primegap/primegap-core.git
-  revision: ce0e649f6b38896360ddea256767ed70a3d9d8cf
+  revision: aae2e126c7dd0ba75c7721df56b7ffcb4ccc368e
   branch: master
   specs:
     primegap-core (0.1.0)
