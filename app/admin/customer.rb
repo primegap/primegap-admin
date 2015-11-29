@@ -1,6 +1,6 @@
 ActiveAdmin.register Customer do
   belongs_to :company, optional: true
-  permit_params :email, :full_name, :first_name, :last_name, :phone
+  permit_params :email, :full_name, :first_name, :last_name, :phone, :company_id
 
   index do
     selectable_column
