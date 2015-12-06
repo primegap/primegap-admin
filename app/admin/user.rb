@@ -44,7 +44,7 @@ ActiveAdmin.register User do
       row :updated_at
     end
     panel 'Authentication Tokens' do
-      table_for user.authentication_tokens do
+      table_for user.authentication_tokens.reorder(last_used_at: :desc) do
         column :body
         column :last_used_at
         column :ip_address
